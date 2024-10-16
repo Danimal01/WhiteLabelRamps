@@ -1,12 +1,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0070f3;
+  --primary-hover: #0051a2;
+  --error: #ff0000;
+  --box-background: #f0f0f0;
+  --border-color: #e0e0e0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --box-background: #2a2a2a;
+    --border-color: #444444;
   }
 }
 
@@ -22,6 +29,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 * {
@@ -35,8 +43,167 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.kyc-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.kyc-forms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.kyc-form {
+  background-color: var(--box-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kyc-form h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.kyc-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.kyc-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.kyc-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.response-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.response-box {
+  background-color: var(--box-background);
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.error-box {
+  background-color: #ffe6e6;
+  border-left: 4px solid var(--error);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--foreground);
+}
+
+.response-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.response-box pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .kyc-forms-container,
+  .response-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* src/app/globals.css */
+
+/* Existing styles... */
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.homepage-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.home-button {
+  padding: 15px 30px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (min-width: 600px) {
+  .homepage-options {
+    flex-direction: row;
   }
 }
