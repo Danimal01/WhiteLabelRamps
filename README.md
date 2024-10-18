@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Please refer to the API Docs to learn more about the capabilities of Unlimit's White Label API's. [https://docs.google.com/document/d/1-q8xxJSby7tukyg32fJnc6QZ0XTQpB_X9VUL_zFB6DA/edit](https://docs.google.com/document/d/1-q8xxJSby7tukyg32fJnc6QZ0XTQpB_X9VUL_zFB6DA/edit)
+
 First, run the development server:
 
 ```bash
