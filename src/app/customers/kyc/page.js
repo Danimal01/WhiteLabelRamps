@@ -274,7 +274,7 @@ const KycFlow = () => {
             name="nationality"
             value={kycMetadataData.kycSubmission.nationality}
             onChange={handleKycMetadataChange}
-            placeholder="Nationality"
+            placeholder="Nationality (2 Letter Code)"
             className="kyc-input"
             required
           />
@@ -292,7 +292,7 @@ const KycFlow = () => {
             name="countryOfResidence"
             value={kycMetadataData.kycSubmission.countryOfResidence}
             onChange={handleKycMetadataChange}
-            placeholder="Country of Residence"
+            placeholder="Country of Residence (2 Letter Code)"
             className="kyc-input"
             required
           />

@@ -207,3 +207,84 @@ a {
     flex-direction: row;
   }
 }
+
+
+
+
+
+/* src/app/globals.css */
+
+/* Existing styles... */
+
+/* src/app/globals.css */
+
+.offramp-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.offramp-form,
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.offramp-input,
+.quote-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.offramp-button,
+.quote-button {
+  padding: 12px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.offramp-button:hover,
+.quote-button:hover {
+  background-color: #005bb5;
+}
+
+.fiat-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.response-box {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.error-box {
+  background-color: #ffe6e6;
+  border-left: 4px solid #ff0000;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+hr {
+  margin: 40px 0;
+}
+
