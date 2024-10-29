@@ -117,10 +117,11 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  background-color: black;
 }
 
 .response-box {
-  background-color: var(--box-background);
+  background-color: black;
   padding: 15px;
   border-radius: 8px;
   position: relative;
@@ -148,7 +149,7 @@ a {
 .response-box h3 {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: var(--primary);
+  color: white;
 }
 
 .response-box pre {
@@ -219,7 +220,8 @@ a {
 
 /* src/app/globals.css */
 
-.offramp-container {
+.offramp-container,
+.offramp-form {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -257,13 +259,14 @@ a {
   background-color: #005bb5;
 }
 
-.fiat-field {
+.fiat-field,
+.transaction-field {
   display: flex;
   flex-direction: column;
 }
 
 .response-box {
-  background-color: #f0f0f0;
+  background-color: #0000;
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
